@@ -1,0 +1,15 @@
+{
+    "dhaaranimohankumar@gmail.com": {
+        "email": "dhaaranimohankumar@gmail.com",
+        "password": "123456",
+        "profile": {
+            "email": "dhaaranimohankumar@gmail.com",
+            "name": "Dhaarani ",
+            "phone": "9843524825",
+            "age": 20,
+            "pregnancy_week": 6,
+            "birthday": "2006-11-01",
+            "due_date": "2027-02-11"
+        }
+    }
+}

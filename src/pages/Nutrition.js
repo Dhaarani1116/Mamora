@@ -10,28 +10,28 @@ const Nutrition = () => {
   const [loading, setLoading] = useState(false);
   const [selectedFood, setSelectedFood] = useState(null);
 
-  // Food images from Unsplash
+  // Food images from Unsplash & User Provided Links
   const foodImages = {
-    spinach: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400',
-    beetroot: 'https://images.unsplash.com/photo-1533231048726-0f47725b8e5f?w=400',
-    pomegranate: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400',
-    lentils: 'https://images.unsplash.com/photo-1516714435131-44d6b64dc6a3?w=400',
-    jaggery: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400',
-    bittergourd: 'https://images.unsplash.com/photo-1618829658686-6c6f0e8c5d4f?w=400',
-    ladyfinger: 'https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?w=400',
-    wheat: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400',
-    cucumber: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=400',
-    ginger: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400',
-    lemon: 'https://images.unsplash.com/photo-1590502593747-42a996133562?w=400',
-    coconut: 'https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?w=400',
-    papaya: 'https://images.unsplash.com/photo-1526318472351-c75fcf070305?w=400',
-    prunes: 'https://images.unsplash.com/photo-1614359832114-1f7d5e8e5e5a?w=400',
-    flaxseeds: 'https://images.unsplash.com/photo-1517423568366-8b83523034fd?w=400',
-    curd: 'https://images.unsplash.com/photo-1571212515416-f781d098922d?w=400',
-    milk: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400',
-    sesame: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400',
-    ragi: 'https://images.unsplash.com/photo-1624806992066-5ffcf7ca8a2b?w=400',
-    almonds: 'https://images.unsplash.com/photo-1508061253366-f7da158b6d61?w=400',
+    spinach: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhDYQ-Klr-qxmInZ3aBYfDOAz_m5ua6j5wGSJsisrbSg&s=10',
+    beetroot: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn70o75FUR9dimwnwtUKhmgSZvq7pWpiBh2ctITSMCsg1EQC4WEutlLPk&s',
+    pomegranate: 'https://www.gettystewart.com/wp-content/uploads/2022/11/pomegranate-and-seeds-s.jpg',
+    lentils: 'https://naturallieplantbased.com/wp-content/uploads/2025/03/lentils-1.jpg',
+    jaggery: 'https://www.health.com/thmb/sjw6tl9BsMoU490NoiI_Wk7ljYc=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-2185398044-78d583abd4cc492aaef1c55a3a403a5f.jpg',
+    bittergourd: 'https://radhakrishnaagriculture.in/cdn/shop/files/bittergourd..jpg?v=1709206932',
+    ladyfinger: 'https://www.organiktruck.com/cdn/shop/files/Organik_Truck_Lady_Finger_-2.jpg?v=1776626104',
+    wheat: 'https://i0.wp.com/pam-main-website-media.s3.amazonaws.com/wp-content/uploads/2024/03/06110226/Wheat-Flour.jpg?fit=1200%2C800&ssl=1',
+    cucumber: 'https://bombayseeds.com/cdn/shop/files/Cucumbers.jpg?v=1729232030',
+    ginger: 'https://dabur1884.com/cdn/shop/articles/Top_10_Ginger_Tea_Benefits__Immune_Inflammation_and_More_1_630a7479-c801-4b7b-b5c7-93e2a9ba3533.png?v=1764053038',
+    lemon: 'https://thevegetablebazaar.in/wp-content/uploads/2022/04/Lemon.png',
+    coconut: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKXnMIkGQo7ZTHs1M_7diZfO7MmFyOVDfvIQ&s',
+    papaya: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS66zVsX1BHHKrI6kJBfNs1h31Un1a_zIWVg&s',
+    prunes: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb6LBu5Ht013W1KOEIH_rXMh5yCNWNFOiXyQ&s',
+    flaxseeds: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAjrIaSd9VruveFvAVlmrWKoTQmBP29TT_6A&s',
+    curd: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjIgNK2xWyAFcCloXvrpcZci_5DYK_2iwj4Q&s',
+    milk: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSph7KkV8WkmWuc6b4DDO-mVc6-Lx8eN-CTuQ&s',
+    sesame: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo0NAi4SSZq1SnACIlp-lNa9glJEQdQAZ71Q&s',
+    ragi: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy1dBFcCNcAahq_AbUs-QLfYJpqnnODyyPuw&s',
+    almonds: 'https://krisikart.com/wp-content/uploads/2026/01/almonds-GettyImages-683814187-2000-44a06e730fac4c60a10cbb5f9642b589.jpg',
     default: 'https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=400'
   };
 

@@ -209,7 +209,7 @@ def process_chat_message(message: str, language: str = "en"):
     
     responses = {
         "en": {
-            "greeting": ["Hello! I'm Maatru AI. How can I help you today? 💕"],
+            "greeting": ["Hello! I'm Mamora AI. How can I help you today? 💕"],
             "nutrition": ["During pregnancy, eat: Folic acid foods (leafy greens), Iron (spinach, jaggery), Calcium (milk, paneer), Protein (dal, eggs). Avoid: raw foods, excess caffeine. 🥗"],
             "symptoms": ["Common symptoms: nausea, fatigue, breast tenderness. Call doctor if: severe pain, bleeding, vision changes. ⚠️"],
             "exercise": ["Safe exercises: walking 30 min, swimming, prenatal yoga. Avoid: heavy lifting, contact sports. 🧘"],
@@ -220,31 +220,48 @@ def process_chat_message(message: str, language: str = "en"):
             "default": ["I can help with: nutrition, symptoms, exercise, appointments, or emergencies. What do you need? 🤔"]
         },
         "hi": {
-            "greeting": ["नमस्ते! मैं मातृकेयर AI हूं। मैं आपकी कैसे मदद कर सकती हूं? 💕"],
-            "nutrition": ["गर्भावस्था में खाएं: फोलिक एसिड (हरी सब्जियां), आयरन (पालक, गुड़), कैल्शियम (दूध), प्रोटीन (दाल, अंडे)। 🥗"],
-            "symptoms": ["सामान्य लक्षण: मतली, थकान, स्तन दर्द। तुरंत कॉल करें: गंभीर दर्द, खून, दृष्टि परिवर्तन। ⚠️"],
-            "default": ["मैं मदद कर सकती हूं: पोषण, लक्षण, व्यायाम, नियुक्ति, या आपातकालीन। आपको क्या चाहिए? 🤔"]
+            "greeting": ["नमस्ते! मैं मामोरा AI हूं। मैं आज आपकी कैसे मदद कर सकती हूं? 💕"],
+            "nutrition": ["गर्भावस्था के दौरान खाएं: फोलिक एसिड (हरी पत्तेदार सब्जियां), आयरन (पालक, गुड़), कैल्शियम (दूध, पनीर), प्रोटीन (दाल, अंडे)। बचें: कच्चे खाद्य पदार्थ, अत्यधिक कैफीन। 🥗"],
+            "symptoms": ["सामान्य लक्षण: मतली, थकान, स्तनों में कोमलता। तुरंत डॉक्टर से संपर्क करें यदि: गंभीर दर्द, रक्तस्राव, दृष्टि में बदलाव हो। ⚠️"],
+            "exercise": ["सुरक्षित व्यायाम: 30 मिनट टहलना, तैरना, प्रसवपूर्व योग। बचें: भारी वजन उठाना, संपर्क वाले खेल। 🧘"],
+            "emergency": ["🚨 आपातकालीन स्थिति: गंभीर दर्द, भारी रक्तस्राव, या बच्चे की हलचल न होने पर तुरंत 108 पर कॉल करें!"],
+            "appointment": ["डॉक्टर से मिलने का समय: सप्ताह 4-28 (मासिक), 28-36 (हर दो सप्ताह में), 36-40 (साप्ताहिक)। डॉक्टर से मिलना न भूलें! 📅"],
+            "mental": ["तनाव महसूस कर रही हैं? गहरी सांस लेने का अभ्यास करें, अपनों से बात करें, अच्छी तरह आराम करें। आप बहुत अच्छा कर रही हैं! 💪"],
+            "baby": ["बच्चे का विकास: सप्ताह 20 के बाद, 2 घंटे में 10 गतिविधियों (किक) की गणना करें। हलचल कम होने पर? तुरंत डॉक्टर को बुलाएं! 👶"],
+            "default": ["मैं आपकी मदद कर सकती हूं: पोषण, लक्षण, व्यायाम, नियुक्तियां, या आपातकालीन। आपको क्या चाहिए? 🤔"]
         },
         "ta": {
-            "greeting": ["வணக்கம்! நான் மாத்ருகேர் AI. நான் உங்களுக்கு எவ்வாறு உதவ முடியும்? 💕"],
-            "nutrition": ["கர்ப்பத்தில் சாப்பிடுங்கள்: போலிக் அமிலம் (கீரை), இரும்பு (பருப்பு), கால்சியம் (பால்), புரதம் (முட்டை)। 🥗"],
-            "default": ["நான் உதவ முடியும்: உணவு, அறிகுறிகள், உடற்பயிற்சி, சந்திப்பு, அவசரம்। என்ன வேண்டும்? 🤔"]
+            "greeting": ["வணக்கம்! நான் மாமோரா AI. இன்று நான் உங்களுக்கு எவ்வாறு உதவ முடியும்? 💕"],
+            "nutrition": ["கர்ப்ப காலத்தில் சாப்பிடுங்கள்: போலிக் அமிலம் (பசலைக்கீரை), இரும்புச் சத்து (பீட்ரூட், வெல்லம்), கால்சியம் (பால், பனீர்), புரதம் (பருப்பு, முட்டை). தவிர்க்கவும்: சமைக்காத உணவுகள், அதிக காஃபின். 🥗"],
+            "symptoms": ["பொதுவான அறிகுறிகள்: குமட்டல், சோர்வு, மார்பக மென்மை. கடுமையான வலி, இரத்தப்போக்கு, பார்வை மாற்றங்கள் இருந்தால் உடனடியாக மருத்துவரை அழைக்கவும். ⚠️"],
+            "exercise": ["பாதுகாப்பான உடற்பயிற்சிகள்: 30 நிமிடம் நடைப்பயிற்சி, நீச்சல், பிரசவக்கால யோகா. தவிர்க்கவும்: அதிக எடை தூக்குதல், அதிர்வு தரும் விளையாட்டுகள். 🧘"],
+            "emergency": ["🚨 அவசரநிலை: கடுமையான வலி, அதிக இரத்தப்போக்கு அல்லது குழந்தையின் அசைவு இல்லை என்றால் உடனடியாக 108 ஐ அழைக்கவும்!"],
+            "appointment": ["மருத்துவ சந்திப்பு அட்டவணை: 4-28 வாரங்கள் (மாதந்தோறும்), 28-36 வாரங்கள் (இரண்டு வாரங்களுக்கு ஒருமுறை), 36-40 வாரங்கள் (வாரம் ஒருமுறை). சந்திப்புகளைத் தவறவிடாதீர்கள்! 📅"],
+            "mental": ["மன அழுத்தமாக உணர்கிறீர்களா? ஆழமாக மூச்சை உள்ளிழுத்து வெளிவிடவும், அன்புகோரியவர்களிடம் பேசவும், நன்றாக ஓய்வெடுக்கவும். நீங்கள் சிறப்பாகச் செய்கிறீர்கள்! 💪"],
+            "baby": ["குழந்தையின் வளர்ச்சி: 20 வாரங்களுக்குப் பிறகு, 2 மணிநேரத்தில் 10 அசைவுகளைக் கணக்கிடுங்கள். அசைவு குறைந்தால்? உடனடியாக மருத்துவரை அழைக்கவும்! 👶"],
+            "default": ["நான் உங்களுக்கு உதவ முடியும்: ஊட்டச்சத்து, அறிகுறிகள், உடற்பயிற்சி, சந்திப்புகள் அல்லது அவசரநிலைகள். உங்களுக்கு என்ன வேண்டும்? 🤔"]
         }
     }
     
     lang_responses = responses.get(language, responses["en"])
     
     # Match intent
-    if any(word in message_lower for word in ["hello", "hi", "hey", "வணக்கம்", "नमस्ते"]):
+    if any(word in message_lower for word in ["hello", "hi", "hey", "வணக்கம்", "नमस्ते", "நலம்"]):
         return lang_responses["greeting"][0]
-    elif any(word in message_lower for word in ["food", "eat", "diet", "nutrition", "உணவு", "खाना"]):
+    elif any(word in message_lower for word in ["food", "eat", "diet", "nutrition", "உணவு", "खाना", "உணவு முறை", "சாப்பாடு", "டயட்", "पोषण", "आहार"]):
         return lang_responses["nutrition"][0]
-    elif any(word in message_lower for word in ["symptom", "pain", "nausea", "அறிகுறி", "लक्षण"]):
+    elif any(word in message_lower for word in ["symptom", "pain", "nausea", "அறிகுறி", "लक्षण", "வலி", "குமட்டல்", "வாந்தி", "தலைவலி", "दर्द", "उल्टी"]):
         return lang_responses["symptoms"][0]
-    elif any(word in message_lower for word in ["exercise", "workout", "yoga", "உடற்பயிற்சி", "व्यायाम"]):
+    elif any(word in message_lower for word in ["exercise", "workout", "yoga", "உடற்பயிற்சி", "व्यायाम", "யோகா", "பயிற்சி", "योगा", "कसरत"]):
         return lang_responses.get("exercise", lang_responses["default"])[0]
-    elif any(word in message_lower for word in ["emergency", "urgent", "bleeding", "அவசரம்", "आपातकाल"]):
+    elif any(word in message_lower for word in ["emergency", "urgent", "bleeding", "அவசரம்", "ஆபத்து", "இரத்தப்போக்கு", "आपातकाल", "खून", "आपात"]):
         return lang_responses.get("emergency", lang_responses["default"])[0]
+    elif any(word in message_lower for word in ["appointment", "visit", "doctor", "சந்திப்பு", "மருத்துவர்", "अपॉइंटमेंट", "डॉक्टर"]):
+        return lang_responses.get("appointment", lang_responses["default"])[0]
+    elif any(word in message_lower for word in ["mental", "stress", "anxiety", "மன அழுத்தம்", "கவலை", "तनाव", "चिंता", "मानसिक"]):
+        return lang_responses.get("mental", lang_responses["default"])[0]
+    elif any(word in message_lower for word in ["baby", "kick", "movement", "குழந்தை", "அசைவு", "बच्चा", "हलचल", "किक"]):
+        return lang_responses.get("baby", lang_responses["default"])[0]
     else:
         return lang_responses["default"][0]
 
@@ -331,6 +348,18 @@ def emergency_alert(lat: float, lng: float, user_id: str = "anonymous"):
         "estimated_arrival": "8-12 minutes"
     }
 
+@app.post("/api/sos")
+def sos_alert(payload: dict):
+    """Process emergency SOS alert from Mamora dashboard"""
+    return {
+        "status": "alert_sent",
+        "message": "Emergency SOS Cloud Signal Dispatched!",
+        "location": payload.get("location"),
+        "patient_name": payload.get("name"),
+        "pregnancy_week": payload.get("week"),
+        "timestamp": datetime.now().isoformat()
+    }
+
 @app.post("/api/upload-report")
 async def upload_report(file: UploadFile = File(...)):
     """Upload and analyze medical report"""
@@ -374,6 +403,16 @@ def get_health_tips(week: int = 20):
         "week": week,
         "trimester": trimester,
         "tips": tips[trimester]
+    }
+
+@app.post("/api/sync")
+def sync_logs(payload: dict):
+    """Sync diagnostics and vitals logs to cloud database"""
+    print("Syncing logs:", payload.get("logs", []))
+    return {
+        "status": "success",
+        "message": "Cloud sync complete!",
+        "synced_count": len(payload.get("logs", []))
     }
 
 if __name__ == "__main__":

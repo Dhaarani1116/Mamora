@@ -67,7 +67,7 @@ const InstallPrompt = ({ onClose }) => {
                 <FaMobileAlt className="text-white text-2xl" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-800">Install MaatruCare</h3>
+                <h3 className="text-xl font-bold text-gray-800">Install Mamora</h3>
                 <p className="text-sm text-gray-500">Add to your home screen</p>
               </div>
             </div>
