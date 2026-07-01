@@ -218,7 +218,7 @@ This project is licensed under the MIT License.
 
 ## 💖 Made with Care
 
-MaatruCare is built to support every mother on their beautiful journey. Every feature is designed with love, care, and medical accuracy in mind.
+Mamora is built to support every mother on their beautiful journey. Every feature is designed with love, care, and medical accuracy in mind.
 
 ---
 
