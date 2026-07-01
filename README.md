@@ -1,4 +1,4 @@
-# MaatruCare - AI-Powered Maternal Health Companion
+# Mamora - AI-Powered Maternal Health Companion
 
 A complete, production-ready mobile-first web application for maternal healthcare, optimized for real-world usage in rural and low-resource environments.
 
